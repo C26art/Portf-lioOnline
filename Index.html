@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian Mitidieri - Web Design/Dev Full Stack </title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/test.css">
+    <link rel="stylesheet" href="">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="circle">
+            <div class="logo"></div>
+            <div class="text">
+                <p>Cristian Mitidieri - Web Design - Dev Full Stack - </p>
+            </div>
+        </div>
+        <div class="container">     
+            <div class="navigator">    
+             <ul>
+                 <li><a href="Inicio.html">Portfólio</a></li>
+             </ul>
+            </div> 
+        </div>        
+            <div class="righSide">
+                <div class="btns dayNight">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <ion-icon name="sunny-outline"></ion-icon>                   
+                </div>
+                <div class="btns menuToggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                    <ion-icon name="close-outline"></ion-icon>                   
+                </div>
+            </div>        
+        </head>
+    </header>
+    <section class="main">
+        <video src="./video/pexels-mikhail-nilov-6981411.mp4" autoplay loop muted type="mp4"></video>
+        <img src="./img/mask.jpg" class="mask">
+        <p class="copyrightText">CRISTIAN MITIDIERI CARVALHAL</p>
+        <p class="copyrightText2">Copyright © 2021 - 2022. Todos os direitos reservados.</p>
+        <ul class="sci">
+            <li><a href="https://github.com/C26art" target="_blank" rel="external">
+                <ion-icon name="logo-github"></ion-icon>
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/cristianmitidieri/" target="_blank" rel="external">
+                <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li><a href="https://wa.me/5521995263373?text=Ol%C3%A1,%20seja%20bem%20vindo(a)...Em%20que%20posso%20ser%20%C3%BAtil?" target="_blank" rel="external">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a></li>
+            <li><a href="mailto:cristiancarvalhal@hotmail.com?subject=subject text" target="_blank" rel="external">
+                <ion-icon name="mail-outline"></ion-icon>
+                </a></li>
+        </ul>    
+    </section>     
+        <ul class="navigation">
+            <li><a href="Inicio.html">Início</a></li>
+            <li><a href="Inicio.html" onclick="toggleMenu();">Sobre</a></li>
+            <li><a href="Inicio.html" onclick="toggleMenu();">Serviços</a></li>
+            <li><a href="Inicio.html" onclick="toggleMenu();">Projetos</a></li>
+            <li><a href="Inicio.html" onclick="toggleMenu();">Depoimentos</a></li>
+            <li><a href="Inicio.html" onclick="toggleMenu();">Contato</a></li>
+        </ul>  
+
+    <script>
+        const text = document.querySelector('.text p');
+        text.innerHTML = text.innerText.split("").map(
+            (char, i) => 
+            `<span style= "transform: rotate(${i * 6.8}deg)">${char}</span>`
+        ).join("")
+    </script>
+
+    <script>
+        let dayNight = document.querySelector('.dayNight')
+        let menuToggle = document.querySelector('.menuToggle')
+        let body = document.querySelector('body')
+        let navigation = document.querySelector('.navigation')
+
+        dayNight.onclick = function () {
+            body.classList.toggle('dark')
+            dayNight.classList.toggle('active')
+        }
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
